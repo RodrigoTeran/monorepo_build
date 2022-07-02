@@ -57,5 +57,6 @@ jobs:
       - name: Run client "build"
         if: contains(steps.file_changes.outputs.files , '"client/')
         working-directory: ./client
-        run: npm ci
-        run: npm run build
+        run: |
+          npm ci
+          npm run build
